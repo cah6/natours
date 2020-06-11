@@ -7,7 +7,7 @@ body {
   box-sizing: border-box;
 }
 
-.heading-primary {
+h1 {
   color: $color-white;
   text-transform: uppercase;
 
@@ -32,4 +32,50 @@ body {
   letter-spacing: 1.75rem;
 
   animation: moveInRight 1s;
+}
+
+.section-about {
+  // text-align: center;
+  // position: relative;
+  // position: relative;
+}
+
+h2 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+  // looks fugly
+  // &:hover {
+  //   transform: skewY(2deg) skewX(15deg) scale(1.1);
+  //   text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  // }
+  margin-bottom: 8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+p.paragraph {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }

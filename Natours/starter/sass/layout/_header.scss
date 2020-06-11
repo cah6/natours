@@ -14,7 +14,7 @@
   position: relative;
 
   /* clipped bottom right */
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 }
 
 .header__logo-box {
