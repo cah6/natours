@@ -10,6 +10,10 @@
   &:hover {
     transform: translateY(-1.5rem) scale(1.05);
   }
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
 }
 
 .feature-box__icon {
@@ -17,4 +21,8 @@
   font-size: 6rem;
   margin-bottom: 0.5rem;
   @include text-primary-gradient;
+
+  @include respond(tab-port) {
+    margin-bottom: 0;
+  }
 }

@@ -21,19 +21,38 @@
     box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
     z-index: 20;
   }
+
+  @include respond(tab-port) {
+    float: left;
+    position: relative;
+    width: 33.3333333%;
+  }
 }
 
 .composition__photo--p1 {
   left: 0;
   top: -2rem;
+
+  @include respond(tab-port) {
+    top: 0;
+  }
 }
 
 .composition__photo--p2 {
   right: 0;
   top: 2rem;
+
+  @include respond(tab-port) {
+    top: 0;
+  }
 }
 
 .composition__photo--p3 {
   left: 20%;
   top: 10rem;
+
+  @include respond(tab-port) {
+    top: 0;
+    left: 0;
+  }
 }

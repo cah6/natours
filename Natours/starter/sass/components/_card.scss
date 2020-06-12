@@ -12,6 +12,10 @@
   &:hover .card__back {
     transform: rotateY(0deg);
   }
+
+  @include respond(tab-port) {
+    height: auto;
+  }
 }
 
 @mixin card-side {
@@ -25,6 +29,13 @@
   overflow: hidden;
   transition: all 0.8s ease;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+  @include respond(tab-port) {
+    height: auto;
+    position: relative;
+    border-radius: 3px;
+    background-color: $color-white;
+  }
 }
 
 .card__front {
@@ -35,6 +46,11 @@
   @include card-side;
 
   transform: rotateY(180deg);
+
+  @include respond(tab-port) {
+    transform: rotateY(0);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
 }
 
 // just playing around
@@ -167,12 +183,25 @@
   transform: translate(-50%, -50%);
   width: 90%;
   text-align: center;
+
+  @include respond(tab-port) {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    padding: 7rem 3rem;
+  }
 }
 
 .card__price-box {
   text-align: center;
   color: $color-white;
   margin-bottom: 4rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem;
+  }
 }
 
 .card__price-only {
